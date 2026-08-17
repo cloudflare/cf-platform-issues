@@ -1,5 +1,41 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
 contact_links:
-  - name: Feature Request
-    url: https://github.com/cloudflare/cf-platform-issues/discussions/new
-    about: Propose and discuss new features, improvements, and RFCs.
+  - name: 💡 Feature request or idea
+    url: https://github.com/cloudflare/cf-platform-issues/discussions/new?category=feature-requests
+    about: Propose new features, improvements and RFCs as a discussion rather than an issue.
+
+  - name: 🛠️ Bug in Wrangler, Miniflare, C3 or the Vite plugin
+    url: https://github.com/cloudflare/workers-sdk/issues/new/choose
+    about: Cloudflare's developer tooling is open source and tracked in the workers-sdk repository.
+
+  - name: ⚙️ Workers runtime behaviour
+    url: https://github.com/cloudflare/workerd/issues
+    about: Runtime APIs, compatibility flags, Node.js compatibility and V8 behaviour live in workerd.
+
+  - name: 📖 Documentation problem
+    url: https://github.com/cloudflare/cloudflare-docs/issues
+    about: Incorrect, missing or unclear documentation on developers.cloudflare.com.
+
+  - name: 🧱 Terraform provider or an official API SDK
+    url: https://github.com/cloudflare/terraform-provider-cloudflare/issues
+    about: For SDKs, use cloudflare-typescript, cloudflare-python or cloudflare-go instead.
+
+  - name: 💳 Account, billing, plan or entitlement problem
+    url: https://dash.cloudflare.com/?to=/:account/support
+    about: Anything specific to your account needs Cloudflare Support — we cannot resolve it on GitHub.
+
+  - name: 🔒 Security vulnerability
+    url: https://www.cloudflare.com/.well-known/security.txt
+    about: Report vulnerabilities privately through Cloudflare's disclosure process, never as a public issue.
+
+  - name: 🚫 Abuse, phishing or malware report
+    url: https://www.cloudflare.com/abuse/
+    about: Report abuse of Cloudflare's services to our Trust & Safety team.
+
+  - name: 📈 Is Cloudflare down?
+    url: https://www.cloudflarestatus.com
+    about: Check for ongoing incidents before filing. Live outages are handled by Cloudflare Support, not here.
+
+  - name: 💬 Questions and help
+    url: https://discord.cloudflare.com
+    about: Join us on Discord, or ask on the Cloudflare Community forum at community.cloudflare.com.
