@@ -6,17 +6,20 @@ labels: []
 
 # Important (Please Read)
 
-This repo is NOT a generalized support forum or issue tracker. 
-This repo is for tracking *verified* and *reproducible* issues only.
-Issues that cannot be independently verified and reproduced will be automatically closed.
+Issues are transferred here automatically from the [workers-sdk](https://github.com/cloudflare/workers-sdk) monorepo.
 
-Please use the following alternatives for more developer/customer focused support:
+This repo is NOT a generalized support forum or issue tracker. 
+This repo is for tracking *verified* and *reproducible* issues ONLY.
+Issues that cannot be independently verified and reproduced will be **automatically closed.**
+
+If you are a developer looking to report a issue, use any of these alternatives:
+  - [workers-sdk Monorepo (wrangler, vite plugin, etc.)](https://github.com/cloudflare/workers-sdk)
   - [Cloudflare Support](https://dash.cloudflare.com/?to=/:account/support) 
   - [Cloudflare Discord](https://discord.cloudflare.com)
-  - [Cloudflare community forum](https://community.cloudflare.com)
-  - [Repo: Workers SDK Monorepo (wrangler, vite plugin, etc.)](https://github.com/cloudflare/workers-sdk)
+  - [Cloudflare Community Forum](https://community.cloudflare.com)
 
-If you understand the specialized purpose of this repo and wish to continue, delete this section of the template and then please fill out the rest.
+If you understand this specialized purpose of this repo and wish to continue with filing an issue here directly (not recommended), 
+then please delete this section of the template and fill out the rest.
 
 ---
 
