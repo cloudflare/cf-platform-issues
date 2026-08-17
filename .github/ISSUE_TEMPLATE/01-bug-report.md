@@ -1,6 +1,7 @@
 ---
 name: Bug Report
-description: Track a verified issue or bug report on the Cloudflare developer platform.
+about: Track a verified issue or bug report on the Cloudflare developer platform.
+labels: []
 ---
 
 # Important (Please Read)
