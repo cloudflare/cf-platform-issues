@@ -7,9 +7,10 @@ Learn more at [cloudflare.com](https://cloudflare.com/)
 ## Links
 
 - [Developer Documentation](https://developers.cloudflare.com/)
-- [Support](https://dash.cloudflare.com/?to=/:account/support)
+- [Customer Support](https://dash.cloudflare.com/?to=/:account/support)
 - [Security Disclosure](https://www.cloudflare.com/disclosure/)
 - [Trust & Safety](https://www.cloudflare.com/abuse/)
 - [Status Dashboard](https://www.cloudflarestatus.com)
 - [Developer Community (Discord)](https://discord.cloudflare.com)
 - [Community Forum](https://community.cloudflare.com)
+- [Workers SDK Monorepo (wrangler, vite plugin, etc.)](https://github.com/cloudflare/workers-sdk)

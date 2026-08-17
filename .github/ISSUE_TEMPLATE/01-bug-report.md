@@ -18,6 +18,8 @@ Please use the following alternatives for more developer/customer focused suppor
 
 If you understand the specialized purpose of this repo and wish to continue, delete this section of the template and then please fill out the rest.
 
+---
+
 ### Describe the Bug
 
 <!-- A clear and concise description of what the issue is. -->
