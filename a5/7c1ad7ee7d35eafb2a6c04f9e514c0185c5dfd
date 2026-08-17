@@ -1,0 +1,19 @@
+CODE_OF_CONDUCT.md
+  s_b85a3c7dbf277d::t_033c3d507e167b 1-128
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "a57c1ad7ee7d35eafb2a6c04f9e514c0185c5dfd",
+  "prompts": {},
+  "sessions": {
+    "s_b85a3c7dbf277d": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_fee882c76ffe7ps9CrmfI38Ej0",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Pete Bacon Darwin <pbacondarwin@cloudflare.com>"
+    }
+  }
+}
