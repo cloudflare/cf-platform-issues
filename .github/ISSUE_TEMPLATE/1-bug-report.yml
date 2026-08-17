@@ -1,178 +1,35 @@
+---
 name: 🐛 Bug report
-description: Report a bug in a Cloudflare product, the Cloudflare dashboard, or the Cloudflare REST API
+description: Track a verified issue or bug on on the Cloudflare developer platform.
 type: Bug
-labels: ["bug"]
+---
 
-body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to file a report. Please fill this out as completely as you can — reports without a reproduction or without concrete evidence usually cannot be acted on.
+# Important (Please Read)
 
-        **This tracker is for bugs in Cloudflare products themselves** — the services, the dashboard, and the REST API. A few things belong elsewhere:
+This repo is NOT a generalized support forum or issue tracker. 
+This repo is for tracking *verified* and *reproducible* issues only.
+Issues that cannot be independently verified and reproduced will be automatically closed.
 
-        - Bugs in Wrangler, Miniflare, C3 or the Vite plugin → [cloudflare/workers-sdk](https://github.com/cloudflare/workers-sdk/issues/new/choose)
-        - Workers runtime behaviour (APIs, compatibility flags, V8) → [cloudflare/workerd](https://github.com/cloudflare/workerd/issues)
-        - Documentation → [cloudflare/cloudflare-docs](https://github.com/cloudflare/cloudflare-docs/issues)
-        - Account, billing or plan problems → [Cloudflare Support](https://dash.cloudflare.com/?to=/:account/support) (we cannot resolve these on GitHub)
-        - Security vulnerabilities → [Cloudflare's disclosure process](https://www.cloudflare.com/.well-known/security.txt) — **never** as a public issue
-        - Questions and help → [Discord](https://discord.cloudflare.com) or the [Community forum](https://community.cloudflare.com)
+Please use the following alternatives for more developer/customer focused support:
+  - [Cloudflare Support](https://dash.cloudflare.com/?to=/:account/support) 
+  - [Cloudflare Discord](https://discord.cloudflare.com)
+  - [Cloudflare community forum](https://community.cloudflare.com)
+  - [Repo: Workers SDK Monorepo (wrangler, vite plugin, etc.)](https://github.com/cloudflare/workers-sdk)
 
-        ⚠️ **Everything you write here is public.** Remove API tokens, keys, cookies, customer data and private hostnames before submitting.
+If you understand the specialized purpose of this repo and wish to continue, delete this section of the template and then please fill out the rest.
 
-  - type: dropdown
-    id: product-group
-    attributes:
-      label: Which area of Cloudflare does this affect?
-      description: Pick the closest match. If you are unsure, choose "Other / not sure" and describe it below.
-      options:
-        - Developer Platform (Workers, Pages, Workers for Platforms, Builds)
-        - AI (Workers AI, AI Gateway, AI Search / AutoRAG, Vectorize)
-        - Storage & databases (R2, KV, D1, Durable Objects, Queues, Hyperdrive)
-        - CDN, cache & performance
-        - Security (WAF, Bot Management, DDoS, Turnstile, Page Shield)
-        - DNS, domains & Registrar
-        - Zero Trust & SASE (Access, Gateway, Tunnel, WARP, Magic Transit)
-        - Media (Stream, Images, Realtime)
-        - Email (Email Routing, Email Service, Email Security)
-        - Analytics & observability (Logs, Logpush, Analytics Engine, Workers Observability)
-        - Dashboard, account & API (auth, API tokens, permissions, plan enforcement)
-        - Other / not sure
-    validations:
-      required: true
+### Describe the Bug
 
-  - type: input
-    id: product
-    attributes:
-      label: Which specific product or feature?
-      description: Be as precise as you can — this is how we route your report to the owning team.
-      placeholder: e.g. D1 read replication, Email Routing rules API, WAF custom rules editor
-    validations:
-      required: true
+<!-- A clear and concise description of what the issue is. -->
 
-  - type: dropdown
-    id: surface
-    attributes:
-      label: Where did you encounter this?
-      description: Select all that apply.
-      multiple: true
-      options:
-        - Cloudflare dashboard
-        - Cloudflare REST API
-        - The product's own behaviour at runtime
-        - Wrangler or another CLI, but the failure looks server-side
-        - Terraform provider or an official API SDK
-        - Other
-    validations:
-      required: true
+### Expected Behavior
 
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Describe the bug, then state what you expected to happen instead. Link to the documentation you are comparing against, if any.
-      placeholder: |
-        What I did:
-        What happened:
-        What I expected instead:
-        Documentation that says otherwise:
-    validations:
-      required: true
+<!-- What did you expect to happen instead? -->
 
-  - type: textarea
-    id: reproduction
-    attributes:
-      label: Steps to reproduce
-      description: The smallest sequence of steps that triggers the problem. Say how often it happens — every time, or intermittently.
-      placeholder: |
-        1.
-        2.
-        3.
+### Steps to Reproduce
 
-        Happens: every time / intermittently (roughly N times out of M)
-    validations:
-      required: true
+<!-- Starting from one of the examples at https://developers.cloudflare.com/workers/examples/, or a basic hello world. -->
 
-  - type: input
-    id: reproduction-link
-    attributes:
-      label: Link to a minimal reproduction
-      description: Optional, but it is the single most useful thing you can provide. A repository, a Worker, or a single `curl` command we can run.
-      placeholder: https://github.com/your-user/minimal-repro
-    validations:
-      required: false
-
-  - type: textarea
-    id: identifiers
-    attributes:
-      label: Request identifiers and error codes
-      description: |
-        Please include these if you have them — they let us find your requests in our own logs, and they often make the difference between a report we can fix and one we cannot.
-
-        - The exact error code and message (e.g. `10072: This account has reached the Workers Free limit...`)
-        - `cf-ray`, `cf-auditlog-id` or `cf-request-id` response headers from a failing request
-        - Timestamps of failing requests, **in UTC**
-      placeholder: |
-        Error: 10002 — An unknown error has occurred
-        cf-ray: a1fc48d6da7c33a1-AUS
-        cf-auditlog-id: 019f8ff2-c3ef-7a22-b8b6-f3a6389e0994
-        Observed: 2026-08-17 17:08 UTC
-      render: text
-    validations:
-      required: false
-
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant logs or error output
-      description: Paste full output rather than a summary where you can — but redact tokens, keys and customer data first.
-      render: text
-    validations:
-      required: false
-
-  - type: input
-    id: regression
-    attributes:
-      label: When did this start, and did it work before?
-      description: If this used to work, when did it last work? A date, or a version you upgraded from.
-      placeholder: e.g. started 2026-08-14; worked until then with no changes on our side
-    validations:
-      required: false
-
-  - type: textarea
-    id: environment
-    attributes:
-      label: Environment
-      description: Whatever is relevant — CLI, SDK or provider versions, Node version, operating system, and your **plan** (Free, Paid, Business, Enterprise). Plan tier matters for anything involving limits or quotas.
-      placeholder: |
-        Plan: Workers Paid
-        Wrangler: 4.113.0
-        Node: 24.3.0
-        OS: macOS 15.5 (also reproduced on ubuntu-latest in CI)
-    validations:
-      required: false
-
-  - type: checkboxes
-    id: checklist
-    attributes:
-      label: Before submitting
-      options:
-        - label: I searched the existing issues and this is not a duplicate.
-          required: true
-        - label: This is not a request about my own account. Billing, plan changes, quota increases, suspensions and abuse reports need [Cloudflare Support](https://dash.cloudflare.com/?to=/:account/support) — but a limit that is being enforced *incorrectly* is a bug, and does belong here.
-          required: true
-        - label: This is not a security vulnerability (those go through [Cloudflare's disclosure process](https://www.cloudflare.com/.well-known/security.txt)).
-          required: true
-        - label: I checked [Cloudflare Status](https://www.cloudflarestatus.com) and this is not an ongoing incident.
-          required: true
-        - label: I have removed API tokens, keys, credentials and customer data from this report.
-          required: true
-
-  - type: checkboxes
-    id: ai-disclosure
-    attributes:
-      label: AI disclosure
-      description: AI-assisted reports are welcome when they are accurate and authorised. See [AGENTS.md](https://github.com/cloudflare/cf-platform-issues/blob/main/AGENTS.md).
-      options:
-        - label: This report was written by an AI agent, with the authorisation of the affected account owner, who can follow up in this thread.
-          required: false
+1.
+2.
+3.
