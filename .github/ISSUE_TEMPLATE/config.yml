@@ -1,5 +1,5 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
 contact_links:
-  - name: 💳 Customer Support
+  - name: Customer Support
     url: https://dash.cloudflare.com/?to=/:account/support
     about: Recommended. If you are having trouble with your account, start here.
